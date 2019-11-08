@@ -10,6 +10,7 @@ enum Groups {
 
 export interface DevServerFlag {
     name: string;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type: any;
     defaultValue?: string | boolean;
     describe: string;

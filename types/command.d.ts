@@ -1,7 +1,8 @@
-import { OptionDefinition } from 'command-line-args'
-export interface Command  {
+import { OptionDefinition } from 'command-line-args';
+
+export interface Command {
     scope?: string;
-    description?: string
+    description?: string;
     /**
      * The long option name.
      */
@@ -11,6 +12,7 @@ export interface Command  {
      * A setter function (you receive the output from this) enabling you to be specific about the type and value received. Typical values
      * are `String` (the default), `Number` and `Boolean` but you can use a custom function. If no option value was set you will receive `null`.
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type?: (input: string) => any;
 
     /**
@@ -37,6 +39,7 @@ export interface Command  {
     /**
      * An initial value for the option.
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     defaultValue?: any;
 
     /**
@@ -47,7 +50,7 @@ export interface Command  {
 
 export interface CoreCommand extends OptionDefinition {
     name?: string;
-    description?: string,
+    description?: string;
     /**
      * The long option name.
      */
@@ -57,6 +60,7 @@ export interface CoreCommand extends OptionDefinition {
      * A setter function (you receive the output from this) enabling you to be specific about the type and value received. Typical values
      * are `String` (the default), `Number` and `Boolean` but you can use a custom function. If no option value was set you will receive `null`.
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     type?: (input: string) => any;
 
     /**
@@ -83,6 +87,7 @@ export interface CoreCommand extends OptionDefinition {
     /**
      * An initial value for the option.
      */
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     defaultValue?: any;
 
     /**
